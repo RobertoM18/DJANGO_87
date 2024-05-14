@@ -1,0 +1,60 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+{% load static %}
+
+<header class="row bg-black">
+    <div class="col-md-4">
+       <img src="{% static 'portfolio/imagen.jpeg' %}"/>
+    </div>
+
+        <div class="col-md-8 my-auto">
+                    <h1>Yo soy <strong>Roberto Mero</strong></h1>
+                    <h3>Y casi renunció a realizar esta tarea.</h3>
+            
+                    <p>
+                        La procrastinación (del latín procrastinare: pro, adelante, y crastinus, mañana),
+                        ​ postergación o posposición es la acción o hábito de retrasar actividades o situaciones 
+                        que deben atenderse, sustituyéndolas por otras situaciones más irrelevantes o agradables 
+                        por miedo a afrontarlas o pereza a realizarlas.
+                    </p>
+                    <a class="btn btn-primary btn-lg roundend-0 my-3"
+                    href="{%static 'portfolio/El gran libro de HTML5, CSS3 y JavaScript Ed 3.pdf' %}" >
+                    Download CV
+                     </a>
+        </div>
+</header>
+
+
+<!-- Seccion del Portfolio -->
+<div class="row my-4 text-center">
+
+    <h3>Mis Proyectos</h3>
+    <p>es una compañía fundada y dirigida por el Dr. Brief, 
+    padre de Bulma en el Año 712. En Dragon Ball GT pasa a 
+    ser presidida por Trunks. La Corporación se basa y toma 
+    su nombre de las cápsulas Hoi Poi creadas asimismo por su fundador el Dr.</p>
+
+    {% for project in projects %}
+    <div class="col-md-4 p-4">
+      <div class="card bg-black card-project">
+        <img src="{{project.image.url }}" class="card-img-top" />
+  
+        <div class="card-body">
+  
+          <h2>{{ project.title }}</h2>
+          <p>{{ project.description }}</p>
+  
+          {% if project.url %}
+          <a href="{{project.url}}" class="btn btn-light rounded-0 btn-sm" target="__blank" rel="noreferrer">Visit the
+            Project</a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+      
+</div>  
+
+{% endblock %}
