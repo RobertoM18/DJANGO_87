@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blog',
     'portfolio',
-    'cloudinary'
+    'cloudinary',
 ]
 
 MIDDLEWARE = [
@@ -88,7 +88,7 @@ WSGI_APPLICATION = 'django_portfolio.wsgi.application'
 DATABASES = {
     'default': dj_database_url.config(
         # Replace this value with your local database's connection string.
-        default = 'postgresql://postgres:postgres@localhost/postgres',
+        default = os.environ.get(' DATABASE_URL_EXTERNAL'),
         conn_max_age=600
     )
 }
@@ -141,7 +141,7 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'portfolio/static'),)
 cloudinary.config( 
   cloud_name = os.environ.get ('CLOUDINARY_CLOUD_NAME'),
   api_key = os.environ.get ('CLOUDINARY_API_KEY') , 
-  api_secret = os.environ.get ('CLOUDINARY_API_SECRET')  
+  api_secret = os.environ.get ('CLOUDINARY_API_SECRET'),  
 )
 
 # Default primary key field type
