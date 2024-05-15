@@ -6,5 +6,6 @@ pip install -r requirements.txt
 
 # Convert static asset files
 python manage.py collectstatic --no-input
-
+python manage.py makemigrations --no input
+python manage.py migrate
 # Apply any outstanding database migrations
