@@ -88,7 +88,7 @@ WSGI_APPLICATION = 'django_portfolio.wsgi.application'
 DATABASES = {
     'default': dj_database_url.config(
         # Replace this value with your local database's connection string.
-        default = os.environ.get(' DATABASE_URL_EXTERNAL'),
+        default = 'postgres://django_card_user:sBucTf6XuyCIlBJWIThHLYQojhIeaSHX@dpg-cp22gfn79t8c73flp2t0-a.oregon-postgres.render.com/django_card',
         conn_max_age=600
     )
 }
