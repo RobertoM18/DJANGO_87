@@ -139,9 +139,9 @@ if not DEBUG:
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'portfolio/static'),)
           
 cloudinary.config( 
-  cloud_name = os.environ.get ('CLOUDINARY_CLOUD_NAME'),
-  api_key = os.environ.get ('CLOUDINARY_API_KEY') , 
-  api_secret = os.environ.get ('CLOUDINARY_API_SECRET'),  
+  cloud_name ='dczvqp46w',
+  api_key = '492882144274145', 
+  api_secret = 'xCXZhOa86eTkFeEFLPaGcrwvveQ',  
 )
 
 # Default primary key field type
