@@ -88,7 +88,7 @@ WSGI_APPLICATION = 'django_portfolio.wsgi.application'
 DATABASES = {
     'default': dj_database_url.config(
         # Replace this value with your local database's connection string.
-        default = 'postgres://django_card_user:sBucTf6XuyCIlBJWIThHLYQojhIeaSHX@dpg-cp22gfn79t8c73flp2t0-a.oregon-postgres.render.com/django_card',
+        default = 'postgres://djangocrud_hk7h_user:e1N8nTqoOHMXHgvVlhn2h983Ci2w4P0h@dpg-cp1pn8ol5elc73f2snvg-a.oregon-postgres.render.com/djangocrud_hk7h',
         conn_max_age=600
     )
 }
